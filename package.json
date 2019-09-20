@@ -1,0 +1,13 @@
+{
+  "name": "test-bazel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@bazel/typescript": "^0.37.1"
+  }
+}
