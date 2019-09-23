@@ -1,5 +1,8 @@
-import app2 from '@app/app2';
+import * as express from 'express';
+import content from '@apps/app2';
 
-const test: string = 'hey';
+const app = express();
 
-console.log(test, app2);
+app.get('/*', (_, res) => res.send(`Hello !! \n this is ${content}`));
+
+app.listen(3000, () => console.log('app1 started on 3000'));

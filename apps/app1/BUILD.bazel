@@ -1,11 +1,21 @@
 package(default_visibility = ["//visibility:public"])
 
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 
 ts_library(
     name = "app1",
     srcs = glob(["index.ts"]),
     deps = [
-        "//apps/app2",
-    ],
+      "@npm//tslib",
+      "@npm//@types/express",
+      "//apps/app2"
+    ]
+)
+
+nodejs_binary(
+    name = "app1_binary",
+    data = [":app1"],
+    entry_point = ":index.ts",
+    node_modules = "@npm//:node_modules"
 )
