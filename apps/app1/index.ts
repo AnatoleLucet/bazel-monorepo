@@ -1,5 +1,5 @@
 import * as express from 'express';
-import content from '@apps/app2';
+import content from '@libs/lib1';
 
 const app = express();
 

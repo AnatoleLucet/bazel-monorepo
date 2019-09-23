@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "df/*": ["*", "bazel-bin/*", "bazel-genfiles/*"],
-      "@apps/*": ["*", "bazel-bin/apps/*", "bazel-genfiles/apps/*"]
+      "@apps/*": ["*", "bazel-bin/apps/*", "bazel-genfiles/apps/*"],
+      "@libs/*": ["*", "bazel-bin/libs/*", "bazel-genfiles/libs/*"]
     },
     "module": "commonjs",
     "noImplicitAny": true,
